@@ -43,7 +43,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: false
-          title: "Build"
+          title: "热力学与统计物理随堂小测PDF"
           files: |
             main.pdf
 
