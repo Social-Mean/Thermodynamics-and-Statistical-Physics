@@ -11,12 +11,13 @@ on:
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  # workflow_dispatch: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
+    permissions: write-all
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -24,7 +25,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       
       # LaTeX
       - name: latex-action
@@ -36,11 +37,13 @@ jobs:
           
       # Release
       - name: Automatic Releases
+        
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
-          title: "Build"
+          prerelease: false
+          title: "热力学与统计物理随堂小测PDF"
           files: |
             main.pdf
 
