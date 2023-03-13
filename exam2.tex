@@ -3,10 +3,56 @@
 \subsection{A组}
 \begin{questions}
   \question 简述卡诺循环及其效率.
+  \begin{solution}
+    (p27)卡诺循环过程由两个等温过程和两个绝热过程组成. 其效率为
+    \begin{equation}
+      \eta = 1 - \frac{T_2}{T_1}.
+    \end{equation}
+  \end{solution}
   \question 热机和制冷机效率如何定义.
+  \begin{solution}
+    (p29)
+    热机效率的定义为气体对外做功$W$与吸收的热量$Q_1$之比:
+    \begin{equation}
+      \eta = \frac{W}{Q_1}.
+    \end{equation}
+    制冷机的工作系数$\eta'$被定义为从低温热源吸取的热量$Q_2$除以外界所作的功$W$:
+    \begin{equation}
+      \eta' = \frac{Q_2}{W}.
+    \end{equation}
+  \end{solution}
   \question 简述热力学第二定律的开氏表述.
+  \begin{solution}
+    (p30)不可能从单一热源吸热使之完全变成有用的功而不引起其他变化.
+  \end{solution}
   \question 证明热力学第二定律的克氏表述和开氏表述的等价性.
+  \begin{solution}
+    (p31)热力学第二定律的两个表述是等效的. 我们先证明, 如果克氏表述不成立, 则开氏表述也不成立. 考虑一个卡诺循环, 工作物质从温度为$T_1$的高温热源吸取热量$Q_1$, 在温度为$T_2$的低温热源放出热量$Q_2$, 对外做功$W=Q_1-Q_2$. 如果克氏表述不成立, 可以将热量$Q_2$从温度为$T_2$的低温热源送到温度为$T_1$的高温热源而不引起其他变化, 则全部过程的最终后果是从温度为$T_1$的热源吸取$Q_1-Q_2$的热量, 将之完全变成有用的功, 这样开氏表述也就不成立.
+
+    反之, 我们再证明, 如果开氏表述不成立, 则克氏表述也不能成立. 如果开氏表述不成立, 一个热机能够从温度为$T_1$的热源吸取热量$Q_1$使之全部转化为有用的功$W=Q_1$, 就可以利用这个功来带动一个逆卡诺循环, 整个过程的最终后果是将热量$Q_2$从温度为$T_2$的低温热源传到温度为$T_1$的高温热源而未引起其他变化. 这样克氏表述也就不能成立.
+  \end{solution}
   \question 将相同质量温度分别为$T_1$和$T_2$的两杯水在等压下绝热混合, 求熵变.
+  \begin{solution}
+    (p44)两杯水等压绝热混合后, 终态温度为$\frac{T_1+T_2}{2}$. 以$T, p$为状态参量, 两杯水的初态分别为$(T_1, p)$和$(T_2, p)$; 终态为$(\frac{T_1+T_2}{2}, p)$. 根据热力学基本方程,
+    \begin{equation}
+      \dd S = \frac{\dd U + p\dd V}{T}.
+    \end{equation}
+    由于$\dd S$是完整微分, 我们可以沿联结初态和终态的任意积分路径进行积分来求两态的熵差. 既然两杯水在初态和终态的压强相同, 在积分中令压强保持不变是方便的. 在压强不变时, $\dd H = \dd U + p\dd V$, 故
+    \begin{equation}
+      \dd S = \frac{\dd H}{T} = \frac{C_p\dd T}{T}.
+    \end{equation}
+    积分后得两杯水的熵变分别为
+    \begin{equation}
+      \Delta S_1 = \int_{T_1}^{\frac{T_1+T_2}{2}}\frac{C_p\dd T}{T} = C_p\ln\frac{T_1+T_2}{2T_1},
+    \end{equation}
+    \begin{equation}
+      \Delta S_2 = \int_{T_2}^{\frac{T_1+T_2}{2}}\frac{C_p\dd T}{T} = C_p\ln\frac{T_1+T_2}{2T_2}.
+    \end{equation}
+    总的熵变等于两杯水的熵变之和:
+    \begin{equation}
+      \Delta S = \Delta S_1 + \Delta S_2 = C_p\ln\frac{(T_1+T_2)^2}{4T_1T_2}.
+    \end{equation}
+  \end{solution}
 \end{questions}
 \subsection{B组}
 \begin{questions}
