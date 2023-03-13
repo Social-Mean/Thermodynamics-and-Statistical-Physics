@@ -4,12 +4,18 @@
 \begin{questions}
   \question 简述热力学的研究对象和统计物理的优缺点.
   \begin{solution}
+    (p3)
     热力学研究的对象是由大量微观粒子(分子或其他粒子)组成的宏观物质系统.
 
-    统计物理的优缺点(\textcolor{red}{待补充}).
+    统计物理的优缺点
+    \begin{description}
+      \item[优点] 由于统计物理学深入到热运动的本质, 它就能够把热力学中的三个相互独立的基本规律归结于一个基本的统计原理, 阐明这三个定律的统计意义, 还可以解释涨落现象. 不仅如此, 在对物质的微观结构作出某些假设之后, 应用物理学理论还可以求得具体物质的特性, 并阐明产生这些特性的微观机理.
+      \item[缺点] 由于统计物理学对物质的微观结构所作的往往只是简化的模型假设, 所得的理论结果也就往往是近似的.
+    \end{description}
   \end{solution}
   \question 简述孤立系统, 开系和闭系的概念.
   \begin{solution}
+    (p3)
     \begin{description}
       \item[孤立系统] 与其他物体既没有物质交换也没有能量交换的系统称为孤立系.
       \item[开系] 与外界既有物质交换, 又有能量交换的系统称为开系.
@@ -18,21 +24,67 @@
   \end{solution}
   \question 简述状态参量和状态函数的概念.
   \begin{solution}
+    (p4)
     \begin{description}
       \item[状态参量]  我们可以根据问题的性质和考虑的方便选择其中几个宏观量作为自变量, 这些自变量本身可以独立的改变, 我们所研究的系统的其他宏观量又可以表达为它们的函数. 这些自变量就足以确定系统的平衡状态, 我们称它们为状态参量.
       \item[状态函数] 其他的宏观变量既然可以表达为状态参量的函数, 便称为状态函数.
     \end{description}
   \end{solution}
   \question 简述热平衡定律
+  \begin{solution}
+    (p7)经验表明, 如果物体A和物体B各自与处在同意状态的物体C达到热平衡, 若令A与B进行热接触, 它们也将处在热平衡. 这个经验事实被称为热平衡定律(热力学第零定律).
+  \end{solution}
   \question 简述准静态过程的概念.
+  \begin{solution}
+    (p14)准静态过程是进行得非常缓慢的过程, 系统在过程中经历的每一个状态都可以看作平衡态.
+  \end{solution}
   \question 简述热力学极限的概念.
+  \begin{solution}
+    (p14) 将均匀系统所有的热力学量区分为强度量和广延量仅在系统所含粒子数$N\to\infty$, 体积$V\to\infty$而粒子数密度$\frac{N}{V}$为有限的极限情形才严格成立. 这一极限情形称为热力学极限. 对于通常的宏观物质系统($N\approx 10^{23}$), 上述特性无疑是很好的近似.
+  \end{solution}
 \end{questions}
 \subsection{B组}
 \begin{questions}
   \question 简述统计物理的研究对象和热力学的优缺点.
+  \begin{solution}
+    (p3)统计物理的研究对象是由大量微观粒子(分子或其他粒子)组成的宏观物质系统.
+
+    热力学的优缺点(p1)
+    \begin{description}
+      \item[优点] 热力学三定律是无数经验的总结, 适用于一切宏观物质系统. 也就是说, 它具有高度的可靠性和普遍性.
+      \item[缺点] 热力学理论不考虑物质的微观结构, 把物质看作连续体, 用连续函数表达物质的性质, 因此不能解释涨落现象.
+    \end{description}
+  \end{solution}
   \question 简述平衡态的概念.
+  \begin{solution}
+    (p3)经验指出, 一个孤立系统, 不论其初态如何复杂, 经过足够长的时间后, 将会到达这样的状态, 系统的各种宏观性质在长时间内不发生任何变化, 这样的状态称为热力学平衡态.
+  \end{solution}
   \question 简述简单系统, 均匀系和相的概念.
+  \begin{solution}
+    (p5)
+    \begin{description}
+      \item[简单系统] 只需要体积$V$和压强$p$两个状态参量便可以确定系统的状态的系统称为简单系统.
+      \item[均匀系] 如果一个系统各部分的性质是完全一样的, 该系统称为均匀系(单相系).
+      \item[相] 一个均匀的部分称为一个相, 因此均匀系也称为单相系.
+    \end{description}
+  \end{solution}
   \question 简述物态方程的概念.
+  \begin{solution}
+    (p8)物态方程就是给出温度与状态参量之间的函数关系的方程.
+  \end{solution}
   \question 如何引入热量的概念.
+  \begin{solution}
+    (p19)如果系统所经历的过程不是绝热过程, 则在过程中外界对系统所作的功$W$不等于过程前后其内能的变化$U_B-U_A$, 二者之差就是系统在过程中从外界吸收的热量:
+    \begin{equation}
+      Q = U_B - U_A - W.
+    \end{equation}
+  \end{solution}
   \question 写出准静态过程中外界对系统做功的通式, 结合该通式简述做功和传热对系统改变的不同.
+  \begin{solution}
+    (p18)
+    \begin{equation}
+      \dj{} W = \sum_i Y_i \dd y_i
+    \end{equation}
+    其中$y_i$称为外参量, $Y_i$是与$y_i$相应的广义力.
+  \end{solution}
 \end{questions}
