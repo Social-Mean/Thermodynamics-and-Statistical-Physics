@@ -1,0 +1,144 @@
+\section{统计物理随堂测验}
+2023.3.20
+\subsection{A组}
+\begin{questions}
+  \question 简述物态方程的概念.
+  \begin{solution}
+    (p8) 物态方程就是给出温度与状态参量之间的函数关系的方程.
+  \end{solution}
+  \question 简述热力学基本微分方程, 说明其得出过程和内涵.
+  \begin{solution}
+    (p39)热力学基本微分方程为
+    \begin{equation}
+      \dd U = T\dd S - p\dd V.
+    \end{equation}
+    得出过程:
+
+    熵变为
+    \begin{equation}
+      S_B - S_A = \int_A^B \frac{\dj Q}{T}.
+    \end{equation}
+    对上式取微分
+    \begin{equation}
+      \dd S = \frac{\dj Q}{T}.
+    \end{equation}
+    根据热力学第一定律, $\dd U = \dj Q + \dj W$. 在可逆过程中如果只有体积变化功, 有 $\dj W = -p\dd V$. 所以
+    \begin{equation}
+      \dd S = \frac{\dd U + p\dd V}{T}.
+    \end{equation}
+    即
+    \begin{equation}
+      \dd U = T\dd S - p\dd V.
+    \end{equation}
+    内涵: 它给出了在相邻的两个平衡态之间, 状态变量$U$, $S$, $V$的增量之间的关系.
+  \end{solution}
+  \question 根据热力学基本微分方程和简单系统焓的定义, 推导其对应的麦克斯韦关系.
+  \begin{solution}
+    (p51) 热力学基本微分方程是 $\dd U = T\dd S - p\dd V$, 焓的定义是 $H = U + pV$, 对$H$微分并带入
+    \begin{equation}
+      \dd H = T\dd S + V\dd p.
+    \end{equation}
+    $H$作为 $S$, $p$ 的函数, 其全微分为
+    \begin{equation}
+      \dd H = \qty(\pdv{H}{S})_p\dd S + \qty(\pdv{H}{p})_S\dd p.
+    \end{equation}
+    两式比较, 可得
+    \begin{equation}
+      \left\{\begin{aligned}
+         & \qty(\pdv{H}{S})_p = T, \\
+         & \qty(\pdv{H}{p})_S = V.
+      \end{aligned}\right.
+    \end{equation}
+    考虑到偏导的次序可以替换, 易得
+    \begin{equation}
+      \qty(\pdv{T}{p})_S = \qty(\pdv{V}{S})_p
+    \end{equation}
+  \end{solution}
+  \question 证明在准静态节流过程中有:
+  \begin{equation}
+    \mu = \qty(\pdv{T}{p})_H = \frac{1}{C_p}\qty[T\qty(\pdv{V}{T})_p - V]
+  \end{equation}
+  \begin{solution}
+    p(57)
+    \begin{equation}
+      \mu = \qty(\pdv{T}{p})_H = \pdv{(T,H)}{(p,H)} = \frac{\pdv{(T,H)}{(T,p)}}{\pdv{(p,H)}{(T,p)}} = \frac{\qty(\pdv{H}{p})_T}{-\qty(\pdv{H}{T})_p} = -\frac{1}{C_p}{\color{red}\qty(\pdv{H}{p})_T}.
+    \end{equation}
+    \begin{equation}
+      \dd H = T\dd S + V\dd p =  \qty(\pdv{H}{S})_p\dd S + \qty(\pdv{H}{p})_S\dd p.
+    \end{equation}
+    \begin{equation}
+      \dd S = \qty(\pdv{S}{T})_p \dd T + \qty(\pdv{S}{p})_T \dd p.
+    \end{equation}
+    \begin{equation}
+      \dd H = T\dd S + V\dd p = T\qty(\pdv{S}{T})_p\dd T + \qty[T\qty(\pdv{S}{p})_T+V]\dd p.
+    \end{equation}
+    所以
+    \begin{equation}
+      {\color{red}\qty(\pdv{H}{p})_T} = T{\color{blue}\qty(\pdv{S}{p})_T}+V.
+    \end{equation}
+    麦氏关系第四条
+    \begin{equation}
+      {\color{blue}\qty(\pdv{S}{p})_T} = -\qty(\pdv{V}{T})_p
+    \end{equation}
+    所以
+    \begin{equation}
+      \mu = \frac{1}{C_p}\qty[T\qty(\pdv{V}{T})_p - V]
+    \end{equation}
+  \end{solution}
+\end{questions}
+\subsection{B组}
+\begin{questions}
+  \question 简述状态函数的概念.
+  \begin{solution}
+    (p4) 选几个宏观量作为自变量, 这些自变量本身可以独立地改变, 我们所研究的系统的其他宏观量又可以表达为它们的函数. 这些自变量就足以确定系统的平衡状态, 称为状态参量. 其他的宏观变量既然可以表达为状态参量的函数, 便称为状态函数.
+  \end{solution}
+  \question 简述什么是热力学温标.
+  \begin{solution}
+    (p35)
+    \begin{equation}
+      \frac{Q_2}{Q_1} = \frac{T_2^*}{T_1^*},
+    \end{equation}
+    两个温度的比值是通过在这两个温度之间工作的可逆热机与热源交换的热量的比值来定义的. 由于比值$\frac{Q_2}{Q_1}$与工作物质的特性无关, 所引进的温标显然不依赖于任何具体物质的特性, 而是一种绝对温标, 称为热力学温标(也称开尔文温标).
+  \end{solution}
+  \question 根据热力学基本方程和简单系统的自由能定义, 推导其对应的麦克斯韦关系.
+  \begin{solution}
+    (p52)
+    \begin{equation}
+      \dd U = T\dd S - p\dd V,
+    \end{equation}
+    \begin{equation}
+      F = U - TS,
+    \end{equation}
+    \begin{equation}
+      \begin{aligned}
+        \Rightarrow \dd F & = \dd U - T\dd S - S\dd T \\
+                          & = -S\dd T - p\dd V.
+      \end{aligned}
+    \end{equation}
+    最终可以得到
+    \begin{equation}
+      \qty(\pdv{S}{V})_T = \qty(\pdv{p}{T})_V
+    \end{equation}
+  \end{solution}
+  \question 证明在准静态绝热过程中有:
+  \begin{equation}
+    \qty(\pdv{T}{p})_S = \frac{T}{C_p} \qty(\pdv{V}{T})_p.
+  \end{equation}
+  \begin{solution}
+    麦氏关系第四条
+    \begin{equation}
+      \qty(\pdv{S}{p})_T = -\qty(\pdv{V}{T})_p
+    \end{equation}
+    \begin{equation}
+      C_p = T\qty(\pdv{S}{T})_p,
+    \end{equation}
+    所以等式右边为
+    \begin{equation}
+      \begin{aligned}
+        \frac{T}{C_p} \qty(\pdv{V}{T})_p & = \frac{T}{T\qty(\pdv{S}{T})_p}\qty(-\qty(\pdv{S}{p})_T) \\
+                                         & = -\frac{\pdv{(S,T)}{(p,T)}}{\pdv{(S,p)}{(T,p)}}         \\
+                                         & = \qty(\pdv{T}{p})_S.
+      \end{aligned}
+    \end{equation}
+  \end{solution}
+\end{questions}
