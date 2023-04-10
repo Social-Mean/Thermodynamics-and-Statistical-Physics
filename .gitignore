@@ -1,9 +1,4 @@
-main.aux
-exam1.aux
-exam2.aux
 main.log
 main.pdf
 main.synctex.gz
-exam3.aux
-exam4.aux
-exam5.aux
+*.aux
