@@ -1,0 +1,169 @@
+\section{统计物理随堂测验}
+2023.3.27
+\subsection{A组}
+\begin{questions}
+  \question 简述等温等压系统处在稳定平衡状态的必要和充分条件.
+  \begin{solution}
+    (p77)吉布斯函数判据
+    \begin{equation}
+      \Delta G > 0 .
+    \end{equation}
+  \end{solution}
+  \question 证明单元系和复相平衡条件.
+  \begin{solution}
+    (p83)单元系复相平衡条件为
+    \begin{equation}
+      \left\{\begin{aligned}
+         & T^\alpha = T^\beta\qc     & \text{(热平衡条件)},  \\
+         & p^\alpha = p^\beta\qc     & \text{(力学平衡条件)}, \\
+         & \mu^\alpha = \mu^\beta\qc & \text{(相变平衡条件)}.
+      \end{aligned}\right.
+    \end{equation}
+    证明如下:
+
+    指标$\alpha$和$\beta$表示两个相, 整个系统是孤立系统, 它的总内能, 总体积和总物质的量应是恒定的, 即
+    \begin{equation}
+      \left\{\begin{aligned}
+        U^\alpha + U^\beta = \text{常量}, \\
+        V^\alpha + V^\beta = \text{常量}, \\
+        n^\alpha + n^\beta = \text{常量}.
+      \end{aligned}\right.
+    \end{equation}
+    设想系统发生一个虚变动. 在虚变动中, 各虚变动满足
+    \begin{equation}
+      \left\{\begin{aligned}
+        \delta U^\alpha +\delta U^\beta =0, \\
+        \delta V^\alpha +\delta V^\beta =0, \\
+        \delta n^\alpha +\delta n^\beta =0.
+      \end{aligned}\right.
+    \end{equation}
+    由于
+    \begin{equation}
+      \dd U = T\dd S - p\dd V + \mu\dd n,
+    \end{equation}
+    所以
+    \begin{equation}
+      \left\{\begin{aligned}
+         & \delta S^\alpha = \frac{\delta U^\alpha+p^\alpha\delta V^\alpha-\mu^\alpha\delta n^\alpha}{T^\alpha}, \\
+         & \delta S^\beta = \frac{\delta U^\beta+p^\beta\delta V^\beta-\mu^\beta\delta n^\beta}{T^\beta}.
+      \end{aligned}\right.
+    \end{equation}
+    根据熵的广延性质, 整个系统的熵变是
+    \begin{equation}
+      \begin{aligned}
+        \delta S & = \delta S^\alpha + \delta S^\beta                          \\
+                 & = \delta U^\alpha\qty(\frac{1}{T^\alpha}-\frac{1}{T^\beta})
+        + \delta V^\alpha
+        \qty(\frac{p^\alpha}{T^\alpha}-\frac{p^\beta}{T^\beta})
+        - \delta n^\alpha\qty(\frac{\mu^\alpha}{T^\alpha}-\frac{\mu^\beta}{T^\beta}).
+      \end{aligned}
+    \end{equation}
+    整个系统达到平衡时, 总熵有极大值, 必有
+    \begin{equation}
+      \delta S = 0.
+    \end{equation}
+    因为 $\delta U^\alpha, \delta V^\alpha, \delta n^\alpha$ 是可以独立改变的, $\delta S=0$, 要求
+    \begin{equation}
+      \left\{\begin{aligned}
+         & \frac{1}{T^\alpha}-\frac{1}{T^\beta} = 0,                  \\
+         & \frac{p^\alpha}{T^\alpha}-\frac{p^\beta}{T^\beta} = 0,     \\
+         & \frac{\mu^\alpha}{T^\alpha}-\frac{\mu^\beta}{T^\beta} = 0.
+      \end{aligned}\right.
+    \end{equation}
+    即
+    \begin{equation}
+      \left\{\begin{aligned}
+         & T^\alpha = T^\beta\qc     & \text{(热平衡条件)},  \\
+         & p^\alpha = p^\beta\qc     & \text{(力学平衡条件)}, \\
+         & \mu^\alpha = \mu^\beta\qc & \text{(相变平衡条件)}.
+      \end{aligned}\right.
+    \end{equation}
+  \end{solution}
+  \question 证明在等温过程中, 系统对外界所做的功 $-W$ 不大于其自由能的减少.
+  \begin{solution}
+    (p46) 等温过程中,
+    \begin{equation}
+      Q \leq T(S_B - S_A),
+    \end{equation}
+    根据热力学第一定律, $U_B-U_A=W+Q$. 代入得
+    \begin{equation}
+      -W \leq (U_A - U_B) - T(S_A - S_B).
+    \end{equation}
+    自由能为
+    \begin{equation}
+      F = U-TS,
+    \end{equation}
+    所以
+    \begin{equation}
+      -W \leq F_A - F_B,
+    \end{equation}
+    即系统在等温过程中对外所作的功不大于其自由能的减小.
+  \end{solution}
+  \question 对于均匀简单系统, 由已知的吉布斯函数$G$, 给出熵, 物态方程, 内能和焓.
+  \begin{solution}
+    (p63)
+  \end{solution}
+  \question 对于均匀简单系统, 证明:
+  \begin{equation}
+    C_p = T\qty(\pdv{S}{T})_p,
+  \end{equation}
+  和
+  \begin{equation}
+    \qty(\pdv{U}{V})_T = T\qty(\pdv{S}{V})_T - p.
+  \end{equation}
+  \begin{solution}
+    (p54)
+  \end{solution}
+\end{questions}
+
+\subsection{B组}
+\begin{questions}
+  \question 简述等温等容系统处在稳定平衡状态的必要和充分条件.
+  \begin{solution}
+    \begin{equation}
+      \Delta F > 0.
+    \end{equation}
+  \end{solution}
+  \question 写出开系的热力学基本方程, 并给出开系的特性函数的全微分形式.
+  \begin{solution}
+    开系的热力学基本方程为
+    \begin{equation}
+      \dd U = T\dd S - p\dd V + \mu\dd n.
+    \end{equation}
+    开系的特性函数的全微分形式为
+    \begin{equation}
+      \dd G = -S\dd T + V\dd p +\mu\dd n.
+    \end{equation}
+    \begin{equation}
+      \dd H = T\dd S + V\dd p + \mu\dd n.
+    \end{equation}
+    \begin{equation}
+      \dd F = -S\dd T - p\dd V + \mu\dd n.
+    \end{equation}
+    巨热力势$J=F-\mu n$, 全微分为
+    \begin{equation}
+      \dd J = -S\dd T - p\dd V - n\dd \mu.
+    \end{equation}
+  \end{solution}
+  \question 证明, 若只有体积功时, 等温等压过程后, 吉布斯函数永不增加.
+  \begin{solution}
+    (p47)
+  \end{solution}
+
+  \question 对于均匀简单系统, 由已知的自由能$F$, 给出熵, 物态方程和内能.
+  \begin{solution}
+    (p63)
+  \end{solution}
+  \question 对于均匀简单系统, 证明:
+  \begin{equation}
+    C_V = T\qty(\pdv{S}{T})_V,
+  \end{equation}
+  和
+  \begin{equation}
+    \qty(\pdv{H}{p})_T = T\qty(\pdv{S}{p})_T + V.
+  \end{equation}
+
+  \begin{solution}
+    (p53)
+  \end{solution}
+\end{questions}
