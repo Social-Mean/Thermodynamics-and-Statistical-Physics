@@ -4,20 +4,149 @@
 \begin{questions}
   \question 给出多元系的热力学基本方程, 并证明吉布斯关系.
   \begin{solution}
-    ()
+    (p111)多元系的热力学基本方程为
+    \begin{equation}
+      \dd U = T\dd S - p\dd V + \sum_i \mu_i\dd n_i.
+    \end{equation}
+    吉布斯函数
+    \begin{equation}
+      G = \sum_i n_i\qty(\pdv{G}{n_i})_{T,p,n_j} = \sum_i n_i \mu_i.
+    \end{equation}
+    对上式求微分得
+    \begin{equation}
+      \dd G = \sum_i n_i\dd \mu_i + \sum_i \mu_i\dd n_i.
+    \end{equation}
+    而$G$又等于$G=U-TS+pV$, 所以
+    \begin{equation}
+      \dd G = -S\dd T + V\dd p + \sum_i \mu_i\dd n_i.
+    \end{equation}
+    两式相比较, 可得吉布斯关系:
+    \begin{equation}
+      S\dd T - V\dd p +\sum_i n_i\dd \mu_i = 0.
+    \end{equation}
   \end{solution}
   \question 求证:
   \begin{equation}
     \qty(\pdv{\mu}{T})_{V,n} = - \qty(\pdv{S}{n})_{T,V}, \qty(\pdv{\mu}{p})_{T,n} = \qty(\pdv{V}{n})_{T,p}.
   \end{equation}
+  \begin{solution}
+    (p106, 3.6)
+    \begin{enumerate}[(a)]
+      \item 由自由能的全微分
+            \begin{equation}
+              \dd F = - S\dd T - p\dd V + \mu\dd n.
+            \end{equation}
+            及偏导数求导次序的可交换性, 易得
+            \begin{equation}
+              \qty(\pdv{\mu}{T})_{V,n} = - \qty(\pdv{S}{n})_{T,V}.
+            \end{equation}
+            这是开系的一个麦克斯韦关系.
+      \item 类似地, 不过这次用的是吉布斯函数的全微分:
+            \begin{equation}
+              \dd G = -S\dd T + V\dd p + \mu\dd n.
+            \end{equation}
+    \end{enumerate}
+  \end{solution}
   \question 多元复相系有$\varphi$个相, 有一个相有$k=2$个组元, 其他相有$k$个组元. 计算平衡状态下, 系统可以独立改变的强度量变量的数目.
+  \begin{solution}
+    {(p114)\color{gray} (答案不保证正确, 非常有可能是错的)
+
+      复相系中总的组元数
+      \begin{equation}
+        K = (\varphi-1)k + 2.
+      \end{equation}
+      根据吉布斯相律
+      \begin{equation}
+        \begin{aligned}
+          f & = K + 2 - \varphi            \\
+            & = k\varphi - k -\varphi + 4.
+        \end{aligned}
+      \end{equation}}
+  \end{solution}
 \end{questions}
 \subsection{B组}
 \begin{questions}
   \question 证明吉布斯相律.
+  \begin{solution}
+    (p113) 设多元复相系有$\varphi$个相, 每个相有$k$个组元, 可以用 $T^\alpha$, $p^\alpha$, $x_1^\alpha,\dots, x_k^\alpha$ 来描述, 但$x^\alpha$满足
+    \begin{equation}
+      \sum_{i=1}^{k} x_i^\alpha = 1.
+    \end{equation}
+    所以每个相可以独立改变的强度量的个数为
+    \begin{equation}
+      1  + 1 + k - 1 = k+1
+    \end{equation}
+    个. $\varphi$个相, 可以独立改变的强度量的个数为
+    \begin{equation}
+      \varphi(k+1).
+    \end{equation}
+    $\varphi$个相之间还有热平衡条件, 力学平衡条件和相变平衡条件:
+    \begin{equation}
+      \left\{\begin{aligned}
+         & T^1 = T^2 = \cdots = T^\varphi,                                \\
+         & p^1 = p^2 = \cdots = p^\varphi,                                \\
+         & \mu_i^1 = \mu_i^2 = \cdots = \mu_i^\varphi\qc(i=1,2,\dots, k).
+      \end{aligned}\right.
+    \end{equation}
+    共有$(\varphi-1) + (\varphi-1) + (\varphi-1)k =(\varphi-1)(k+2) $个方程. 所以独立变量的个数为
+    \begin{equation}
+      f = \varphi(k+1) - (\varphi-1)(k+2) = k+2 - \varphi
+    \end{equation}
+  \end{solution}
   \question 推导给出两相平衡曲线斜率的克拉柏龙方程.
+  \begin{solution}
+    (p86) 设$(T, p)$和$(T+\dd T, p+\dd p)$是两相平衡曲线上邻近的两点, 在这两点上, 两相的化学势都相等:
+    \begin{equation}
+      \mu^\alpha(T,p) = \mu^\beta(T,p),
+    \end{equation}
+    \begin{equation}
+      \mu^\alpha(T+\dd T, p+\dd p) = \mu^\beta(T+\dd T, p+\dd p).
+    \end{equation}
+    两式相减, 得
+    \begin{equation}
+      \dd \mu^\alpha = \dd \mu ^\beta.
+    \end{equation}
+    这表示, 当沿着平衡曲线由$(T, p)$变到$(T+\dd T, p+\dd p)$时, 两相的化学势的变化相等. 化学势的全微分为
+    \begin{equation}
+      \dd \mu = -S_m \dd T + V_m\dd p,
+    \end{equation}
+    其中$S_m$和$V_m$分别是摩尔熵和摩尔体积, 所以
+    \begin{equation}
+      -S_m^\alpha \dd T + V_m^\alpha\dd p = -S_m^\beta \dd T + V_m^\beta\dd p,
+    \end{equation}
+    或
+    \begin{equation}
+      \dv{p}{V} = \frac{S_m^\beta - S_m^\alpha}{V_m^\beta - V_m^\alpha}.
+    \end{equation}
+    定义$L=T(S_m^\beta - S_m^\alpha)$, 所以
+    \begin{equation}
+      \dv{p}{V}  = \frac{L}{T(V_m^\beta - V_m^\alpha)}.
+    \end{equation}
+  \end{solution}
   \question 求证:
   \begin{equation}
     \qty(\pdv{U}{n})_{T,V} - \mu = -T\qty(\pdv{\mu}{T})_{V,n}.
   \end{equation}
+  \begin{solution}
+    (p106, 3.7) 自由能$F=U-TS$是以$T, V, n$为自变量的特性函数, 求$F$对$n$的偏导数($T,V$不变), 有
+    \begin{equation}
+      \qty(\pdv{F}{n})_{T,V} = \qty(\pdv{U}{n})_{T,V} - T\qty(\pdv{S}{n})_{T,V}.
+      \label{eq:1}
+    \end{equation}
+    但自由能的全微分为
+    \begin{equation}
+      \dd F = -S\dd T - p\dd V +\mu\dd n.
+    \end{equation}
+    可得
+    \begin{equation}
+      \qty(\pdv{F}{n})_{T,V} = \mu,
+    \end{equation}
+    \begin{equation}
+      \qty(\pdv{S}{n})_{T,V} = -\qty(\pdv{\mu}{T})_{V,n},
+    \end{equation}
+    代入\eqref{eq:1}, 即有
+    \begin{equation}
+      \qty(\pdv{U}{n})_{T,V} - \mu = -T\qty(\pdv{\mu}{T})_{V,n}.
+    \end{equation}
+  \end{solution}
 \end{questions}
