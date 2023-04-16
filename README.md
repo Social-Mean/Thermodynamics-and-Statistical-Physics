@@ -15,3 +15,7 @@
 
 - 每题要给出答案在书中的页数, 格式为 (p 页码).
 - commit 格式要规范. 具体可以参考 [如何规范你的 Git commit？ - 阿里开发者的文章 - 知乎](https://zhuanlan.zhihu.com/p/182553920)
+
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Social-Mean/Thermodynamics-and-Statistical-Physics&type=Date)](https://star-history.com/#Social-Mean/Thermodynamics-and-Statistical-Physics&Date)
