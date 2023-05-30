@@ -1,0 +1,84 @@
+\section{统计物理随堂测验}
+2023.5.15
+\subsection{A组}
+\begin{questions}
+  \qt 简述孤立系统的熵判据.
+  \begin{solution}
+    (p76) 在体积和内能保持不变的情形下, 如果围绕某一状态发生的各种可能的虚变动引起的熵变 $\Delta S < 0$, 该状态熵就具有极大值, 是稳定的平衡状态. 孤立系统处在稳定平衡状态的必要和充分条件为
+    \begin{equation}
+      \Delta S < 0.
+    \end{equation}
+  \end{solution}
+  \qt 简述等概率原理.
+  \begin{solution}
+    (p178) 对于处在\uline{平衡状态}的\uline{孤立系统}, 系统\CJKunderline{各个可能的微观状态出现的概率是相等的}.
+  \end{solution}
+  \qt 给出经典统计中的玻尔兹曼分布, 并说明道理.
+  \begin{solution}
+    (p184) 量子统计中的玻尔兹曼分布是
+    \begin{equation}
+      a_l = \omega_l e^{-\alpha-\beta\varepsilon_l}.
+    \end{equation}
+    对于经典统计中的玻尔兹曼分布, 只需要将 $\omega_l$ 换成 $\frac{\Delta \omega_l}{h_0^r}$ 即可(p181).
+    \begin{equation}
+      a_l = e^{-\alpha-\beta\varepsilon_l} \frac{\Delta \omega_l}{h_0^r}.
+    \end{equation}
+  \end{solution}
+  \qt 在玻尔兹曼量子统计中, 用配分函数给出内能的统计表达式.
+  \begin{solution}
+    (p190) 玻尔兹曼量子统计中, 配分函数为
+    \begin{equation}
+      Z_1 = \sum_l \omega_l e^{-\beta \varepsilon_l}.
+    \end{equation}
+    系统的总粒子数为
+    \begin{equation}
+      N = \sum_l a_l = \sum_l \omega_l e^{-\alpha-\beta\varepsilon_l} = e^{-\alpha} \sum_l \omega_l e^{-\beta\varepsilon_l} = e^{-\alpha}Z_1.
+    \end{equation}
+    内能是系统中所粒子无规运动总能量的统计平均值, 所以
+    \begin{equation}
+      \begin{aligned}
+        U & = \sum_l a_l \varepsilon_l = \sum_l\varepsilon\omega_l e^{-\alpha-\beta\varepsilon_l} = e^{-\alpha} \sum_l \varepsilon_l\omega_l e^{-\beta\varepsilon_l} \\
+          & = e^{-\alpha} \qty(-\pdv{\beta}) \sum_l \omega_l e^{-\beta\varepsilon_l} = \frac{N}{Z_1}(-\pdv{\beta})Z_1 = -N\pdv{\beta}\ln Z_1.
+      \end{aligned}
+    \end{equation}
+  \end{solution}
+\end{questions}
+
+\subsection{B组}
+\begin{questions}
+  \qt 在等温等容条件下, 系统处于稳定平衡的充要条件是什么, 为什么?
+  \begin{solution}
+    (p77) 自由能判据
+    \begin{equation}
+      \Delta F > 0.
+    \end{equation}
+    因为在等温等容的条件下, 系统的自由能永不增加.
+  \end{solution}
+  \qt 简述分布和最概然分布的概念.
+  \begin{solution}
+    (p178) 能级 $\varepsilon_l$ 上有 $a_l$ 个粒子, 为了书写方便, 以符号 $a_l$ 表示数列 $a_1, a_2, \cdots, a_l, \cdots$, 称为一个分布.
+
+    (p182) 根据等概率原理, 对于处在平衡状态的孤立系统, 每一个可能的微观状态出现的概率是相等的.因此, \CJKunderline{微观状态数最多的分布}, 出现的概率最大, 称为最概然分布.
+  \end{solution}
+  \qt 简述三种分布之间的关系.
+  \begin{solution}
+    (p187) 当满足经典极限条件 ($\frac{a_l}{\omega_l}\ll 1$, 对所有的$l$, 也称非简并性条件) 时, 有
+    \begin{equation}
+      \varOmega_{\mathrm{B.E.}} \approx \frac{\varOmega_{\mathrm{M.B.}}}{N!} \approx \varOmega_{\mathrm{F.D.}}.
+    \end{equation}
+  \end{solution}
+  \qt 在玻尔兹曼量子统计中, 用配分函数给出广义作用力的统计表达式.
+  \begin{solution}
+    (p191) 广义力是 $\pdv{\varepsilon_l}{y}$ 的统计平均,
+    \begin{equation}
+      \begin{aligned}
+        Y & = \sum_l \pdv{\varepsilon_l}{y} a_l                                            \\
+          & = \sum_l \pdv{\varepsilon_l}{y} \omega_l e^{-\alpha-\beta\varepsilon_l}        \\
+          & = e^{-\alpha} \sum_l \pdv{\varepsilon_l}{y} \omega_l e^{-\beta\varepsilon_l}   \\
+          & = e^{-\alpha} (-\frac{1}{\beta}\pdv{y})\sum_l \omega_l e^{-\beta\varepsilon_l} \\
+          & = \frac{N}{Z_1} (-\frac{1}{\beta}\pdv{y}) Z_1                                  \\
+          & = -\frac{N}{\beta}\pdv{y}\ln Z_1.
+      \end{aligned}
+    \end{equation}
+  \end{solution}
+\end{questions}

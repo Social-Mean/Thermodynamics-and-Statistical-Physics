@@ -1,0 +1,70 @@
+\section{统计物理随堂测验}
+2023.4.24
+\subsection{A组}
+\begin{questions}
+  \question 对于简单系统, 给出自由能的全微分, 并推导相应的麦克斯韦关系.
+  \begin{solution}
+    (p52) 自由能全微分为:
+
+    \begin{equation}
+      \label{eq:1}
+      \dd F = -S\dd T - p \dd V.
+    \end{equation}
+    可得:
+    \begin{equation}
+      \label{eq:2}
+      \left( \pdv{F}{T} \right)_V = -S \qc \left( \pdv{F}{V} \right)_T = -p.
+    \end{equation}
+    所以相应的麦克斯韦关系为:
+    \begin{equation}
+      \label{eq:3}
+      \left( \pdv{S}{V} \right)_T = \left( \pdv{p}{T} \right)_V.
+    \end{equation}
+  \end{solution}
+  \question 简述近独立玻色子组成的系统特点.
+  \begin{solution}
+    (p176) 由玻色子组成的系统称为玻色系统, 不受泡利不相容原理的约束. 这就是说, 由多个全同近独立的玻色子组成的玻色系统中, 处在同一个体量子态的玻色子数量是不受限制的.
+  \end{solution}
+  \question 对于近独立粒子构成的费米系统, 计算给定一个分布 $a_l$ 后, 对应的系统微观态数, 系统粒子能极为: $\{\varepsilon_1, \varepsilon_2, \cdots, \varepsilon_l, \cdots\}$, 对应的能级简并度为: $ \{ \omega_1, \omega_2, \cdots, \omega_l, \cdots  \}$.
+  \begin{solution}
+    (p180)    对于费米系统, 粒子不可分辨, 每一个个体量子态最多只能容纳一个粒子. $ a_l $ 个粒子占据能级 $ \varepsilon_l$ 上的 $ \omega_l  $ 个量子态, 相当于从 $\omega_l$ 个量子态中挑出 $a_l$ 个来为粒子所占据(注意 $w_l > a_l$), 有 $ \omega_l! / [a_l!(\omega_l-a_l)!]$ 种可能的方式. 将各能级的结果相乘, 就得到费米系统与分布 $\{a_l\}$ 相应的微观状态数为
+
+    \begin{equation}
+      \label{eq:4}
+      \Omega_{\mathrm{F.D.}} = \prod_l \frac{\omega_l!}{a_l! (\omega_l-a_l)!}
+    \end{equation}
+  \end{solution}
+
+  \question 求近独立粒子构成的玻尔兹曼系统的最概然分布.
+  \begin{solution}
+    (p182) 玻尔兹曼系统中:
+
+    \begin{equation}
+      \label{eq:5}
+      \Omega = \frac{N!}{\prod_l a_l !} \prod_l \omega_l^{a_l}.
+    \end{equation}
+
+    玻尔兹曼系统中粒子的最概然分布是使 $\Omega$ 为极大的分布. 两边取对数, 得
+    \begin{equation}
+      \label{eq:6}
+      \ln \Omega = \ln N! - \sum_l\ln a_l! + \sum_l a_l \ln \omega_l.
+    \end{equation}
+    假设所有的 $a_l$ 都很大, 使用斯特林公式进行近似, 上式可化为
+    \begin{align}
+      \label{eq:7}
+      \ln\Omega & = N(\ln N - 1) - \sum_l a_l(\ln a_l - 1) + \sum_l a_l \ln\omega_l \\
+                & = N\ln N - \sum_l a_l \ln a_l + \sum_l a_l \ln \omega_l.
+    \end{align}
+    为求得使 $\ln\Omega$ 为极大的分布, 我们令各 $a_l$ 有 $\delta a_l$ 的变化,
+
+
+  \end{solution}
+\end{questions}
+
+\subsection{B组}
+\begin{questions}
+  \question 对于简单系统, 给出吉布斯函数的全微分, 并推导相应的麦克斯韦关系.
+  \question 简述近独立费米子组成的系统特点.
+  \question 对于玻尔兹曼系统, 计算给定一个分布 $ \{a_l \}$ 后, 对应的系统微观态数. 系统粒子能级为: 系统粒子能极为: $\{\varepsilon_1, \varepsilon_2, \cdots, \varepsilon_l, \cdots\}$, 对应的能级简并度为: $ \{ \omega_1, \omega_2, \cdots, \omega_l, \cdots  \}$
+  \question 求近独立粒子构成的玻色系统的最概然分布.
+\end{questions}

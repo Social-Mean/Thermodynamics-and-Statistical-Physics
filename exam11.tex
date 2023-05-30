@@ -1,0 +1,150 @@
+\section{统计物理随堂测验}
+2023.5.22
+\subsection{A组}
+\begin{questions}
+  \qt 玻色系统中如何定义配分函数?
+  \begin{solution}
+    (p226) 玻色系统的平均总粒子数为:
+    \begin{equation}
+      \bar{N} = \sum_l a_l = \sum_l \frac{\omega_l}{e^{\alpha+\beta\varepsilon_l}-1}.
+    \end{equation}
+    玻色系统的巨配分函数为:
+    \begin{equation}
+      \varXi = \prod_l \varXi_l = \prod_l (1-e^{-\alpha-\beta\varepsilon_l})^{-\omega_l}.
+    \end{equation}
+    对数为:
+    \begin{equation}
+      \ln\varXi = -\sum_l \omega_l \ln(1-e^{-\alpha-\beta\varepsilon_l}).
+    \end{equation}
+    $\bar{N}$ 可以写为
+    \begin{equation}
+      \bar{N} = -\pdv{\beta} \ln\varXi.
+    \end{equation}
+  \end{solution}
+  \qt 由上述配分函数如何给出玻色系统的内能, 广义力和熵的统计表达式?
+  \begin{solution}
+    (p226) 内能
+    \begin{equation}
+      U = \sum_l \varepsilon_l \alpha_l = \sum_l \frac{\varepsilon_l \omega_l}{e^{\alpha+\beta\varepsilon_l}-1} = -\pdv{\beta} \ln \varXi.
+    \end{equation}
+
+    外界对系统的广义作用力 $Y$ 是 $\pdv{\varepsilon_l}{y}$ 的统计平均值:
+    \begin{equation}
+      Y = \sum_l \pdv{\varepsilon_l}{y}a_l = \sum_l \frac{\omega_l}{e^{\alpha+\beta\varepsilon_l}-1} \pdv{\varepsilon_l}{y} = -\frac{1}{\beta}\pdv{y}\ln\varXi.
+    \end{equation}
+
+    \begin{equation}
+      \beta = \frac{1}{kT} \qc \alpha = -\frac{\mu}{kT}.
+    \end{equation}
+
+    熵
+    \begin{equation}
+      \begin{aligned}
+        S & = k \qty(\ln\varXi - \alpha\pdv{\alpha}\ln\varXi - \beta\pdv{\beta}\ln\varXi) \\
+          & = k(\ln\varXi + \alpha \bar{N} + \beta U)                                     \\
+          & = k \ln \varOmega.
+      \end{aligned}
+    \end{equation}
+  \end{solution}
+  \qt 推导玻色爱因斯坦凝聚时, 处在能量最低能级的粒子数密度.
+  \begin{solution}
+    (p231) 临界温度由下式定出:
+    \begin{equation}
+      \frac{2\pi}{h^3} (2m)^{3/2} \int_0^\infty\frac{\varepsilon^{1/2}\dd \varepsilon}{e^{\frac{\varepsilon}{kT_C}}-1} = n.
+    \end{equation}
+    令 $x = \varepsilon / kT_C$, 上式可以表达为:
+    \begin{equation}
+      \frac{2\pi}{h^3} (2mkT_C)^{3/2} \int_0^\infty \frac{x^{1/2}\dd x}{e^x - 1} = n.
+    \end{equation}
+
+    设 $n_0(T)$ 是温度为 $T$ 时处在能级 $\varepsilon=0$ 的粒子数密度, $n_{\varepsilon>0}$ 是处在激发能级 $\varepsilon>0$ 的粒子数密度, 有
+    \begin{equation}
+      n_0 + n_{\varepsilon>0} = n.
+    \end{equation}
+    其中,
+    \begin{equation}
+      \begin{aligned}
+        n_{\varepsilon>0} & = \frac{2\pi}{h^3} (2m)^{3/2} \int_0^\infty \frac{\varepsilon^{1/2}\dd \varepsilon}{e^{\frac{\varepsilon}{kT}} - 1} \\
+                          & = \frac{2\pi}{h^3} (2m)^{3/2} T^{3/2} \int_0^\infty \frac{x^{1/2}\dd \varepsilon}{e^{x} - 1}                        \\
+                          & = n\qty(\frac{T}{T_C})^{3/2}.
+      \end{aligned}
+    \end{equation}
+    所以
+    \begin{equation}
+      n_0(T) = n\qty[1-\qty(\frac{T}{T_C})^{3/2}].
+    \end{equation}
+  \end{solution}
+  \qt 推导平衡辐射场内能随频率的分布.
+  \begin{solution}
+    (p235) 光子气体的统计分布为:
+    \begin{equation}
+      a_l = \frac{\omega_l }{e^{\beta\varepsilon_l} - 1}.
+    \end{equation}
+
+    光子的自旋量子数为 $1$. 自旋在动量方向的投影可取 $\pm\hbar$ 两个可能的取值, 相当于左, 右偏振. 考虑到光子自旋有两个投影, 可知在体积为 $V$ 的空窖内, 在 $p$ 到 $p+\dd p$ 的动量范围内, 光子的量子态数为:
+    \begin{equation}
+      \frac{8\pi V}{h^3} p^2 \dd p.
+    \end{equation}
+    对于光子
+    \begin{equation}
+      \varepsilon = cp = \hbar \omega
+    \end{equation}
+    将光子的量子态数中的 $p$ 换成 $\omega$, 可得量子态数为:
+    \begin{equation}
+      \frac{V}{\pi^2c^3} \frac{\omega^2\dd \omega}{e^{\hbar\omega/kT} - 1}.
+    \end{equation}
+    所以辐射场的内能为:
+    \begin{equation}
+      \begin{aligned}
+        U(\omega, T)\dd \omega & = \varepsilon \frac{V}{\pi^2c^3} \frac{\omega^2\dd \omega}{e^{\hbar\omega/kT} - 1}  \\
+                               & = \hbar \omega \frac{V}{\pi^2c^3} \frac{\omega^2\dd \omega}{e^{\hbar\omega/kT} - 1} \\
+                               & = \frac{V}{\pi^2c^3} \frac{\hbar\omega^3}{e^{\hbar\omega/kT} - 1}\dd \omega.
+      \end{aligned}
+    \end{equation}
+  \end{solution}
+\end{questions}
+
+\subsection{B组}
+\begin{questions}
+  \qt 费米系统中如何定义配分函数?
+  \begin{solution}
+    (p227) 对于费米系统, 配分函数为
+    \begin{equation}
+      \varXi = \prod_l\varXi_l = \prod_l \qty(1+e^{-\alpha-\beta\varepsilon_l})^{\omega_l}.
+    \end{equation}
+    其对数为
+    \begin{equation}
+      \ln\varXi = \sum_l \omega_l \ln(1+e^{-\alpha-\beta\varepsilon_l}).
+    \end{equation}
+  \end{solution}
+  \qt 由上述配分函数如何给出费米系统的内能, 广义力和熵的统计表达式?
+  \begin{solution}
+    (p226) 与玻色系统的表达式完全一样, 见 A 组第 2 题.
+  \end{solution}
+  \qt 简述费米能级, 费米动量和费米速度的概念.
+  \begin{solution}
+    (p241)
+    \begin{description}
+      \item[费米能级] 费米能级 $\mu(0)$ 是电子气体在 $\SI{0}{K}$ 时的化学势.
+        \begin{equation}
+          \mu(0) = \frac{\hbar^2}{2m}(3\pi^2\frac{N}{V})^{2/3}.
+        \end{equation}
+      \item[费米动量] 费米动量 $p_\mathrm{F}$ 是 $\SI{0}{K}$ 时电子的最大动量. 令 $\mu(0) = \frac{p_\mathrm{F}^2}{2m}$, 可得费米动量为
+        \begin{equation}
+          p_\mathrm{F} = (3\pi^2 n)^{1/3} \hbar.
+        \end{equation}
+      \item[费米速率] 费米动量对应的速率 $v_{\mathrm{F}} = \frac{p_{\mathrm{F}}}{m}$ 成为费米速率.
+    \end{description}
+  \end{solution}
+  \qt 定性解释金属中电子对热容的贡献.
+  \begin{solution}
+    (p242) 由 $T>0$ 时电子的分布可知, 只有能量在 $\mu$ 附近, 量级为 $kT$ 的范围内的电子对热容有贡献. 根据这一考虑可以粗略的估计电子气体的热容. 以 $N_{\text{有效}}$ 表示能量在 $\mu$ 附近 $kT$ 范围内对热容有贡献的有效电子数
+    \begin{equation}
+      N_{\text{有效}} \approx \frac{kT}{\mu} N.
+    \end{equation}
+    将能量均分定理用于有效电子, 每一有效电子对热容的贡献为 $\frac{3}{2}kT$, 则金中自由电子对热容的贡献为:
+    \begin{equation}
+      C_V = \frac{3}{2}Nk(\frac{kT}{\mu}) = \frac{3}{2}Nk\frac{T}{T_\mathrm{F}}.
+    \end{equation}
+  \end{solution}
+\end{questions}
