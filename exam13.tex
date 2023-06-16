@@ -2,15 +2,94 @@
 2023.6.5
 \subsection{A组}
 \begin{questions}
-  \qt 比较固体热容的德拜理论和爱因斯坦理论.
+\qt 比较固体热容的德拜理论和爱因斯坦理论.
+\begin{solution}
+  (p273) 系统的内能为
+  \begin{equation}
+    U = U_0 + \sum_{i=1}^{3N}\frac{\hbar\omega_
+      i}{e^{\beta \hbar\omega_i} - 1}.
+  \end{equation}
+  要具体求出上式, 需要知道简正振动的频率分布, 即简正振动的频谱.
+
+  \uline{爱因斯坦模型是假设 $3N$ 个简正振动的频率都相同. 这假设相当于认为原子以相同的频率独立地振动};
+
+  \uline{德拜将固体看作连续的弹性介质, $3N$ 个简正振动是弹性介质的基本波动. 固体上任意的弹性波都可以分解为 $3N$ 个简正振动的叠加}.\dots
+\end{solution}
   \qt 简述用正则系综讨论系统热力学性质的路径.
+\begin{solution}
+  (书上没有, 来源于华麟, 华麟来源于学长, 所以不保证对)
+  \begin{enumerate}
+    \item 先求微观状态数 $\Omega$.
+    \item 再求配分函数, 由配分函数求自由能 $F$.
+    \item 再求其他热力学量.
+  \end{enumerate}
+\end{solution}
   \qt 推导正则系综的分布函数.
-  定性解释金属中电子热容量与温度 $T$ 成正比.
+\begin{solution}
+  (p262) 系统与热源合起来构成一个复合系统. 这复合系统是一个孤立系统, 具有确定的能量. 假设系统和热源的作用很弱, 复合系统的总能量可以表示为系统的能量eh热源的能量$E_r$之和:
+  \begin{equation}
+    E + E_r = E^{(0)}.
+  \end{equation}
+  既然热源很大, 必有$E\ll E^{(0)}$.
+
+  当系统处在能量为 $E_s$ 的状态 $s$ 时, 热源可处在能量为 $E^{(0)}-E_s$ 的任何一个微观状态. 以 $\Omega_r(E^{(0)}-E_s)$ 表示能量为 $E^{(0)}-E_s$ 的热源的微观状态数, 则当系统处在状态 $s$ 时, 复合系统的可能的微观状态数为 $\Omega(E^{(0)}-E_s)\times 1$. 复合系统是一个孤立系统, 在平衡状态下, 它的每一个可能的微观状态出现的概率是相等的. 所以系统处在状态 $s$ 的概率 $\rho_s$ 与 $\Omega_r(E^{(0)}-E_s)$ 成正比, 即
+  \begin{equation}
+    \rho_s \propto \Omega_r(E^{(0)}-E_s).
+  \end{equation}
+  取对数并泰勒展开,
+  \begin{equation}
+    \begin{aligned}
+      \ln\Omega_r(E^{(0)}-E_s) & = \ln\Omega_r(E^(0)) + \qty(\pdv{\ln\Omega_r}{E_r})_{E_r=E^{(0)}}(-E_s) \\
+                               & = {\color{green}\ln\Omega_r(E^{(0)})} - \beta E_s.
+    \end{aligned}
+  \end{equation}
+  其中,
+  \begin{equation}
+    \beta = \qty(\pdv{\ln\Omega_r}{E_r})_{E_r=E^{(0)}} = \frac{1}{kT}.
+  \end{equation}
+  ${\color{green}\ln\Omega_r(E^{(0)})}$ 是一个常量, 所以可以写成 $\ln\rho_s\propto - \beta E_s$ 即 $\rho_s \propto e^{-\beta E_s}$.
+
+  归一化后,
+  \begin{equation}
+    \rho_s = \frac{1}{Z}e^{-\beta E_s} \qc
+    Z = \sum_s e^{-\beta E_s}.
+  \end{equation}
+  $\sum\limits_s$ 表示对粒子数为$N$和体积为$V$的系统的所有微观状态求和.
+\end{solution}
+\qt 定性解释金属中电子热容量与温度 $T$ 成正比.
+\begin{solution}
+  (p242, 重考题) 与11B4一样. \uline{期末大概率会考.}
+\end{solution}
 \end{questions}
 \subsection{B组}
 \begin{questions}
   \qt 解释正则系综与微正则系综是等价的.
+\begin{solution}
+  (p266) 正则系综与微正则系综是等价的, 用微正则分布和正则分布求得的热力学量实际上相同. 用这两个分布求热力学量实质上相当于选取不同的特性函数, 即选取自变量为$N,V,S$的内能$U$或自变量为$N,V,T$的自由能$F$为特性函数.
+  \begin{align}
+    \text{微正则分布} & \to U(N,V,S) \\
+    \text{正则分布}   & \to F(N,V,T)
+  \end{align}
+\end{solution}
   \qt 简述微正则分布的研究对象.
+\begin{solution}
+  (p253) 微正则系综研究对象是孤立系统, 给定宏观条件就是具有确定的粒子数 $N$, 体积 $V$ 和能量 $E$.
+\end{solution}
   \qt 简述平衡态的微正则系综的分布函数.
+\begin{solution}
+  (p255) 微正则分布也叫等概率原理.
+  \begin{equation}
+    \rho_s = \frac{1}{\varOmega}.
+  \end{equation}
+\end{solution}
   \qt 解释负温度的概念.
+\begin{solution}
+  (p218) 系统三温度$T$与参量$y$保持不变时熵随内能的变化率之间存在以下关系:
+  \begin{equation}
+    \frac{1}{T} = \qty(\pdv{S}{U})_y.
+  \end{equation}
+  在一般的系统中, 内能愈高时系统可能的微观状态数愈多, 即熵是随内能单调地增加的. 由上式可知, 这样的状态其温度是恒正的. 但也存在一些系统, 其熵函数不随内能单调的增加. 当系统的内能增加但熵反而减小时, 系统就处在负温度状态.
+
+  \uline{这个题目突然在最后一次小测上考, 说明期末有概率考这个.}
+\end{solution}
 \end{questions}
