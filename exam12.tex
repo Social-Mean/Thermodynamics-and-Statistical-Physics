@@ -1,0 +1,60 @@
+\section{统计物理随堂测验}
+2023.5.29
+\subsection{A组}
+\begin{questions}
+  \qt 简述费米能级, 费米动量和费米速度的概念.
+  \begin{solution}
+    (p241, 重考题) 与上次小测的B3完全一样. 所以这个题目很可能期末也考.
+  \end{solution}
+  \qt 简述 $\Gamma$ 空间的概念.
+  \begin{solution}
+    (p250) 根据经典力学, 系统在任一时刻的微观运动状态由 $f$ 个广义坐标 $q_1, q_2, \dots, q_f$ 及与其共轭的 $f$ 个广义动量 $p_1, p_2, \dots, p_f$ 在该时刻的数值确定. 以这 $2f$ 个变量为直角坐标构成一个 $2f$ 维空间, 称为相空间或 $\Gamma$ 空间.
+  \end{solution}
+  \qt 简述刘维尔定理.
+  \begin{solution}
+    (p252)
+    \begin{equation}
+      \dv{\rho}{t} = 0.
+    \end{equation}
+    如果随着一个代表点沿正则方程所确定的轨道在相空间中运动, 其邻域的代表点密度是不随时间改变的常数.
+  \end{solution}
+  \qt 微正则分布求热力学函数的程序.
+  \begin{solution}
+    (p260) 首先求出微观状态数 $\omega(N, E, V)$, 由此得系统的熵:
+    \begin{equation}
+      S(N, E, V) = k \ln \omega(N, E, V).
+    \end{equation}
+    由上式原则上可解除 $E = E(S, V, N)$. 内能作为 $S, V$ 的函数是特性函数. 内能的全微分为(将内能记作 $E$ 并注意 $N$ 是常数)
+    \begin{equation}
+      \dd E = T\dd S - p\dd V.
+    \end{equation}
+    由此得
+    \begin{equation}
+      T = \qty(\pdv{E}{S})_{V,N} \qc p = -\qty(\pdv{E}{V})_{S,N}.
+    \end{equation}
+    如果已知 $E(S,V,N)$, 由上面两个方程原则上可得 $S(T, V, N)$ 和 $p(T, V, N)$, 再代入 $E(S,V,N)$ 即得 $E(T, V, N)$. 这样便将物态方程, 内能和熵都表达为 $T, V, N$ 的函数, 从而确定系统的全部平衡性质.
+  \end{solution}
+  \qt 简述系综理论的根本问题.
+  \begin{solution}
+    (p254) 确定分布函数 $\rho$ 是系综理论的根本问题.
+  \end{solution}
+\end{questions}
+\subsection{B组}
+\begin{questions}
+  \qt 简述有相互作用系统如何描述.
+  \begin{solution}
+    (p250) 当粒子间的相互作用不能忽略时, 应把系统当作一个整体考虑. \dots 相空间 \dots, 系统在某一时刻的运动状态 $q_1, q_2, \dots, q_f$; $p_1, p_2,\dots, p_f$ 可用相空间中的一点表示, 称为系统状态的代表点.
+  \end{solution}
+  \qt 对比 $\mu$ 空间 和 $\Gamma$ 空间的概念.
+  \begin{solution}
+    $\mu$ 空间是在课本的 p165. 大概是: $\mu$ 空间的坐标是粒子的广义坐标和广义动量, 描述的是粒子的运动状态; 而$\Gamma$空间的坐标是系统的广义坐标和广义动量, 描述的是系统的运动状态.
+  \end{solution}
+  \qt 简述统计系综的概念.
+  \begin{solution}
+    (p254) 设想有大量结构完全相同的系统, 处在相同的宏观条件下. 我们把这大量系统的集合称为统计系综.
+  \end{solution}
+  \qt 正则分布的研究对象.
+  \begin{solution}
+    (p262) 正则分布研究的是具有确定的$N,V,T$值的系统的分布. 可以设想为与大热源接触而达到平衡的系统.
+  \end{solution}
+\end{questions}
