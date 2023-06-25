@@ -102,6 +102,13 @@
   \question 对于均匀简单系统, 由已知的吉布斯函数$G$, 给出熵, 物态方程, 内能和焓.
   \begin{solution}
     (p63)
+\begin{gather}
+  S = -\pdv{G}{T},\\
+  V = \pdv{G}{p}, \\
+  U = G - T\pdv{G}{T} - p\pdv{G}{p},\\
+  H = G - T\pdv{G}{T}.
+\end{gather}
+(注意$G=U-TS+pV$, 不要跟自由能$F$搞混了.)
   \end{solution}
   \question 对于均匀简单系统, 证明:
   \begin{equation}
@@ -112,7 +119,13 @@
     \qty(\pdv{U}{V})_T = T\qty(\pdv{S}{V})_T - p.
   \end{equation}
   \begin{solution}
-    (p54)
+(p54, p53)
+\begin{equation}
+  C_p = \qty(\pdv{H}{T})_p
+\end{equation}
+写出$\dd H$的表达式, 把$S$看成$T,p$的函数, 并求全微分.
+
+写出$\dd U$的表达式, 把$S$看成$V,T$的函数, 并求全微分.
   \end{solution}
 \end{questions}
 
@@ -147,12 +160,18 @@
   \end{solution}
   \question 证明, 若只有体积功时, 等温等压过程后, 吉布斯函数永不增加.
   \begin{solution}
-    (p47)
+(p47)
+\begin{gather}
+  -W \le F_A - F_B,\\
+  W = -p(V_B-V_A),\\
+  G = F+pV,\\
+  G_B-G_A\le 0.
+\end{gather}
   \end{solution}
 
   \question 对于均匀简单系统, 由已知的自由能$F$, 给出熵, 物态方程和内能.
   \begin{solution}
-    (p63)
+(p63) 与A组题类似, 只是这里换成了自由能. $F = U-TS$.
   \end{solution}
   \question 对于均匀简单系统, 证明:
   \begin{equation}
@@ -164,6 +183,12 @@
   \end{equation}
 
   \begin{solution}
-    (p53)
+(p53) 与A组题类似,
+\begin{equation}
+  C_V = \qty(\pdv{U}{T})_V.
+\end{equation}
+写出$\dd U$的表达式, 把$S$看成$T,V$的函数, 并求全微分.
+
+写出$\dd H$的表达式, 把$S$看成$T,p$的函数, 并求全微分.
   \end{solution}
 \end{questions}
