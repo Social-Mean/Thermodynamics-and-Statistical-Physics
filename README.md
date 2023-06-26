@@ -2,6 +2,10 @@
 
 这是同济大学 2023 年春统计物理随堂小测题.
 
+# 下载链接
+现已完结[点我](https://github.com/Social-Mean/Thermodynamics-and-Statistical-Physics/releases/download/latest/main.pdf)下载.
+
+
 # 当前进度
 
 - [x] 小测 1
