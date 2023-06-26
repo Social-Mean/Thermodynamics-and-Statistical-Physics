@@ -55,7 +55,11 @@
       \ln\Omega & = N(\ln N - 1) - \sum_l a_l(\ln a_l - 1) + \sum_l a_l \ln\omega_l \\
                 & = N\ln N - \sum_l a_l \ln a_l + \sum_l a_l \ln \omega_l.
     \end{align}
-    为求得使 $\ln\Omega$ 为极大的分布, 我们令各 $a_l$ 有 $\delta a_l$ 的变化,
+为求得使 $\ln\Omega$ 为极大的分布, 我们令各 $a_l$ 有 $\delta a_l$ 的变化, $\ln\varOmega$将因而有$\delta\ln\varOmega$的变化. 使$\ln\varOmega$为极大的分布$\{a_l\}$必使$\delta\ln\varOmega=0$:
+
+\dots(不想写了, 太难推了, 后面用拉格朗日未定乘子法.)
+
+$a_l = \omega_le^{-\alpha-\beta\varepsilon_l}$.
 
 
   \end{solution}
@@ -64,7 +68,25 @@
 \subsection{B组}
 \begin{questions}
   \question 对于简单系统, 给出吉布斯函数的全微分, 并推导相应的麦克斯韦关系.
+\begin{solution}
+  (p52) 略.
+\end{solution}
   \question 简述近独立费米子组成的系统特点.
-  \question 对于玻尔兹曼系统, 计算给定一个分布 $ \{a_l \}$ 后, 对应的系统微观态数. 系统粒子能级为: 系统粒子能极为: $\{\varepsilon_1, \varepsilon_2, \cdots, \varepsilon_l, \cdots\}$, 对应的能级简并度为: $ \{ \omega_1, \omega_2, \cdots, \omega_l, \cdots  \}$
+\begin{solution}
+  (p176)由费米子组成的系统称为费米系统, 遵从泡利不相容原理. 粒子不可分辨, 每一个个体量子态最多能容纳一个粒子.
+\end{solution}
+\question 对于玻尔兹曼系统, 计算给定一个分布 $ \{a_l \}$ 后, 对应的系统微观态数. 系统粒子能级为: 系统粒子能极为: $\{\varepsilon_1, \varepsilon_2, \cdots, \varepsilon_l, \cdots\}$, 对应的能级简并度为: $ \{ \omega_1, \omega_2, \cdots,\allowbreak \omega_l, \cdots  \}$.
+\begin{solution}
+  (p179)
+  \begin{equation}
+    \varOmega_{\text{M.B.}} = \frac{N!}{\prod_l a_l !}\prod_l \omega_l^{a_l}.
+  \end{equation}
+\end{solution}
   \question 求近独立粒子构成的玻色系统的最概然分布.
+\begin{solution}
+  (p186)
+  \begin{equation}
+    a_l = \frac{\omega_l}{e^{\alpha+\beta\varepsilon_l}-1}.
+  \end{equation}
+\end{solution}
 \end{questions}
