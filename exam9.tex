@@ -3,24 +3,77 @@
 \subsection{A组}
 \begin{questions}
   \question 写出多元系热力学基本方程, 并说明意义.
+\begin{solution}
+  (p111)
+  \begin{equation}
+    \dd U = T\dd S - p\dd V + \sum_i \mu_i\dd n_i.
+  \end{equation}
+  意义? 我不到啊!
+\end{solution}
   \question 给出单相化学反应平衡条件.
+\begin{solution}
+  (p120)
+  \begin{equation}
+    \sum_i \nu_i\mu_i = 0.
+  \end{equation}
+\end{solution}
   \question 推导吉布斯相律.
+\begin{solution}
+  (p114) 与第6次小测B组第一题一样. \uline{说明很有可能考这个}.
+\end{solution}
   \question 简述粒子运动状态的经典描述; 简述系统微观运动状态量子描述.
+\begin{solution}
+  (p165第二段) 如果粒子遵从\uline{经典力学的运动规律}, 对粒子运动状态的描述称为\uline{经典描述}; 如果粒子遵从\uline{量子力学的运动规律}, 对粒子运动状态的描述称为\uline{量子描述}. (说白了, 遵从什么运动规律, 就是什么描述.)
+\end{solution}
   \question 证明对于二维自由粒子, 在面积 $L^2$ 内, 在 $\varepsilon$ 到 $\varepsilon+\dd \varepsilon$ 能量范围内, 量子态数为:
   \begin{equation}
     D(\varepsilon)\dd \varepsilon = \frac{2\pi L^2}{h^2}m \dd \varepsilon.
   \end{equation}
+\begin{solution}
+  对于二维粒子$p\to p+\dd p$内:
+  \begin{equation}
+    \dd n_x \dd n_y = \frac{L^2}{h^2}\dd p_x \dd p_y = \frac{L^2}{h^2} p\dd p \dd\phi.
+  \end{equation}
+  \begin{equation}
+    \int_0^{2\pi}\frac{L^2}{h^2} p\dd p \dd\phi = \frac{2\pi L^2}{h^2}p\dd p.
+  \end{equation}
+  $\varepsilon = \frac{p^2}{2m}$, $\dd p = \frac{m\dd \varepsilon}{p}$,
+  所以
+  \begin{equation}
+    D(\varepsilon)\dd \varepsilon = \frac{2\pi L^2}{h^2}m \dd \varepsilon.
+  \end{equation}
+\end{solution}
 \end{questions}
 
 \subsection{B组}
 \begin{questions}
   \question 为什么一般情况下, 复相系不存在总的焓, 自由能和吉布斯函数.
+\begin{solution}
+  (p112) 因为仅当各项的\uline{压强}相同时, 总的\uline{焓}才有定义, 等于各相的焓之和, 即$H = \sum_\alpha H^\alpha$;\\
+  仅当各项的\uline{温度}相同时, 总的\uline{自由能}才有定义, 等于各相的自由能之和, 即$F = \sum_\alpha F^\alpha$; \\
+  仅当各项的\uline{温度和压强}都相同时, 总的\uline{吉布斯函数}才有定义, 等于各相的吉布斯函数之和, 即$G = \sum_\alpha G^\alpha$;
+\end{solution}
   \question 画出两种典型的二元系相图, 并给予简要说明.
+\begin{solution}
+  (p115二元系相图举例这一节) 这一节三个图选两个画就行了.
+\end{solution}
   \question 简述粒子运动状态的量子描述; 简述系统微观运动状态经典描述.
+\begin{solution}
+  (p165) 跟A组题的第4题一模一样. (难道这题期末要考?)
+\end{solution}
   \question 简述分布的概念.
+\begin{solution}
+  (p178, 曾经小测时考过, 也许期末也会考?) 处于能级$\varepsilon_l$ 上的粒子数为$a_l$. 数列$\{a_l\}$称为一个分布.
+\end{solution}
   \question 证明对于一维自由粒子, 在长度 $L$ 内, 在 $\varepsilon$ 到 $\varepsilon+\dd \varepsilon$ 能量范围内, 量子态数为:
   \begin{equation}
 D(\varepsilon)\dd \varepsilon = \frac{2L}{h} \left( \frac{m}{2 \varepsilon} \right)^{\frac{1}{2}}\dd \varepsilon.
   \end{equation}
-
+\begin{solution}
+  与A组题类似, 只不过这里是一维情况. 需要注意一维有两个运动方向, 最开始的方程列为
+  \begin{equation}
+    \dd n = \frac{2L}{h}\dd p.
+  \end{equation}
+  然后把$p$换成$\varepsilon$即可.
+\end{solution}
 \end{questions}
