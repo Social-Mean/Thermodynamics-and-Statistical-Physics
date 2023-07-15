@@ -43,7 +43,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: false
-          title: "Auto Release"
+          title: "点击这里下载编译好的PDF文件!"
           files: |
             main.pdf
 
